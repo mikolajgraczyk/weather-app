@@ -3,8 +3,6 @@ import { styled } from "styled-components";
 export const StyledForecastList = styled.div`
   display: flex;
   overflow-x: scroll;
-  border: 1px black solid;
-  border-radius: 12px;;
 `;
 
 export const ForecastTile = styled.div`

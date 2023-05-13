@@ -1,8 +1,9 @@
 import ErrorScreen from "./ErrorScreen";
 import LoadingScreen from "./LoadingScreen";
 import { useFindCitiesByCoords } from "../../useFindCities";
-import ForecastList from "./Forecast";
+import ForecastList from "./ForecastList";
 import CurrentWeatherInfo from "./CurrentWeatherInfo";
+import SpecificInfo from "./SpecificInfo";
 import { MoreData } from "./styled";
 
 const CityPage = () => {
@@ -13,7 +14,8 @@ const CityPage = () => {
       <>
         <CurrentWeatherInfo currentWeatherData={weatherData.current} />
         <MoreData>
-          <ForecastList weatherData={weatherData} />
+          <ForecastList forecastData={weatherData.forecast} />
+          <SpecificInfo currentWeatherData={weatherData.current}></SpecificInfo>
         </MoreData>
       </>
     );
