@@ -1,6 +1,6 @@
 import ErrorScreen from "./ErrorScreen";
 import LoadingScreen from "./LoadingScreen";
-import { useFindCitiesByCoords } from "../../useFindCities";
+import { useFindCitiesByCoords } from "../useFindCities";
 import ForecastList from "./ForecastList";
 import CurrentWeatherInfo from "./CurrentWeatherInfo";
 import SpecificInfo from "./SpecificInfo";

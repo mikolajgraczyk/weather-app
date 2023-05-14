@@ -2,7 +2,6 @@ import { StyledSpecificInfo, Block, Info, InfoName, Data } from "./styled";
 import { convertDate } from "../useConvertDate";
 
 const SpecificInfo = ({ currentWeatherData }) => {
-  console.log(currentWeatherData);
 
   const sunriseTimestamp = convertDate(currentWeatherData.sys.sunrise).hour;
   const sunsetTimestamp = convertDate(currentWeatherData.sys.sunset).hour;
