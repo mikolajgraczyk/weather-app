@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSavedLocations } from "../useSavedLocations";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [savedLocationsData, setSavedLocationsData] = useState([]);
@@ -39,13 +40,19 @@ const HomePage = () => {
 
   return (
     <>
-    {savedLocationsData.map(location => {
-      return(
-        <div key={location.id}>
-          {location.name} 
-        </div>
-      );
-    })}
+      {savedLocationsData.map((location) => {
+        return (
+          <Link
+            to={{
+              pathname: `/city/${location.id}`,
+              search: `?lat=${location.lat}&lon=${location.lon}`,
+            }}
+            key={location.id}
+          >
+            {location.name} {location.temp.toFixed(0)} °C<br />
+          </Link>
+        );
+      })}
     </>
   );
 };
