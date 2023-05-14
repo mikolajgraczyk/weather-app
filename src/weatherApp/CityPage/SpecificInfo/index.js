@@ -1,4 +1,4 @@
-import { StyledSpecificInfo, Block, Info } from "./styled";
+import { StyledSpecificInfo, Block, Info, InfoName, Data } from "./styled";
 import { convertDate } from "../useConvertDate";
 
 const SpecificInfo = ({ currentWeatherData }) => {
@@ -10,14 +10,32 @@ const SpecificInfo = ({ currentWeatherData }) => {
   return (
     <StyledSpecificInfo>
       <Block>
-        <Info>Pressure: {currentWeatherData.main.pressure} hPa</Info>
-        <Info>Wind: {currentWeatherData.wind.speed} m/s</Info>
-        <Info>Sunrise: {sunriseTimestamp}</Info>
+        <Info>
+          <InfoName>Pressure:</InfoName>
+          <Data> {currentWeatherData.main.pressure} hPa</Data>
+        </Info>
+        <Info>
+          <InfoName>Wind:</InfoName>
+          <Data> {currentWeatherData.wind.speed} m/s</Data>
+        </Info>
+        <Info>
+          <InfoName>Sunrise:</InfoName>
+          <Data> {sunriseTimestamp}</Data>
+        </Info>
       </Block>
       <Block>
-        <Info>Humidity: {currentWeatherData.main.humidity}%</Info>
-        <Info>Visibility: {currentWeatherData.visibility} m</Info>
-        <Info>Sunset: {sunsetTimestamp}</Info>
+        <Info>
+          <InfoName>Humidity:</InfoName>
+          <Data> {currentWeatherData.main.humidity}%</Data>
+        </Info>
+        <Info>
+          <InfoName>Visibility:</InfoName>
+          <Data> {currentWeatherData.visibility} m</Data>
+        </Info>
+        <Info>
+          <InfoName>Sunset:</InfoName>
+          <Data> {sunsetTimestamp}</Data>
+        </Info>
       </Block>
     </StyledSpecificInfo>
   );
