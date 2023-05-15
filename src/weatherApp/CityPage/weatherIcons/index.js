@@ -64,34 +64,62 @@ export const TornadoIcon = styled(Tornado)`
 export const WindIcon = styled(Wind)`
   width: 48px;
   height: 48px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    justify-self: center;
+  }
 `;
 
 export const PressureHighIcon = styled(PressureHigh)`
   width: 48px;
   height: 48px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    justify-self: center;
+  }
 `;
 
 export const PressureLowIcon = styled(PressureLow)`
   width: 48px;
   height: 48px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    justify-self: center;
+  }
 `;
 
 export const SunriseIcon = styled(sunrise)`
   width: 48px;
   height: 48px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    justify-self: center;
+  }
 `;
 
 export const SunsetIcon = styled(sunset)`
   width: 48px;
   height: 48px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    justify-self: center;
+  }
 `;
 
 export const HumidityIcon = styled(humidity)`
   width: 48px;
   height: 48px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    justify-self: center;
+  }
 `;
 
 export const StarIcon = styled(star)`
   width: 48px;
   height: 48px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    justify-self: center;
+  }
 `;

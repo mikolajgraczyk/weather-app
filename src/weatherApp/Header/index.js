@@ -16,9 +16,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 const Header = ({ location }) => {
-  const inputRef = useRef(null);
   const navigate = useNavigate();
-
   const { onClickSaveButton, isLocationSaved } = useSavedLocations();
   const { onFormSubmit, cityName, foundCities, setCityName } =
     useFindCitiesByName();
@@ -35,7 +33,6 @@ const Header = ({ location }) => {
           </BackToHomepageButton>
           <Form onSubmit={onFormSubmit}>
             <Input
-              ref={inputRef}
               onChange={({ target }) => setCityName(target.value)}
               value={cityName}
               placeholder="Search"
@@ -51,7 +48,7 @@ const Header = ({ location }) => {
           <StarIcon />
         </SaveButton>
       </StyledHeader>
-      {foundCities && <CitiesList foundCities={foundCities} />}
+      {foundCities.length > 0 && <CitiesList foundCities={foundCities} />}
     </>
   );
 };

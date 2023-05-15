@@ -11,6 +11,11 @@ export const Container = styled.main`
   color: white;
   box-shadow: 0px 0px 31px 1px rgba(0, 0, 0, 1);
 
+  & {
+    scrollbar-width: 4px;
+    scrollbar-color: #555 #888;
+  }
+
   &::-webkit-scrollbar {
     width: 4px;
   }
@@ -25,5 +30,9 @@ export const Container = styled.main`
 
   &::-webkit-scrollbar-thumb:hover {
     background: #444;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    padding: 8px 8px 0 4px;
   }
 `;

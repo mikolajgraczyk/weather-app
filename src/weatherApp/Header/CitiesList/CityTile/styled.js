@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
-  border-bottom: 1px black solid;
+  border-bottom: 1px white solid;
   padding: 10px;
 
   &:last-child{
@@ -11,15 +11,15 @@ export const StyledLink = styled(Link)`
   }
 
   &:link {
-    color: black;
+    color: white;
   }
 
   &:visited {
-    color: black;
+    color: white;
   }
 
   &:active {
-    color: black;
+    color: white;
   }
 `;
 

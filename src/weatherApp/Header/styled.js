@@ -42,6 +42,10 @@ export const MagnifyingGlassIcon = styled(MagnifyingGlass)`
   width: 32px;
   height: 32px;
   margin-left: 12px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+  display: none;
+  }
 `;
 
 export const StarIcon = styled(Star)`
@@ -66,6 +70,14 @@ export const Search = styled.div`
   display: flex;
   width: 35%;
   align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
+  width: 60%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+  width: 100%;
+  }
 `;
 
 export const SaveButton = styled.button`

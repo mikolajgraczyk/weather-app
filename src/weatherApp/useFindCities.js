@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 export const useFindCitiesByName = () => {
   const [cityName, setCityName] = useState("");
-  const [foundCities, setFoundCities] = useState();
+  const [foundCities, setFoundCities] = useState([]);
 
   const onFormSubmit = (event) => {
     event.preventDefault();

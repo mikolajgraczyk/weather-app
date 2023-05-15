@@ -1,6 +1,6 @@
 import {
   StyledCurrentWeatherInfo,
-  CityName,
+  Name,
   Temp,
   TempFeelsLike,
   Condition,
@@ -9,7 +9,7 @@ import {
 const CurrentWeatherInfo = ({ currentWeatherData }) => {
   return (
     <StyledCurrentWeatherInfo>
-      <CityName>{currentWeatherData.name}</CityName>
+      <Name>{currentWeatherData.name}</Name>
       <Temp>{currentWeatherData.main.temp.toFixed(0)} °C</Temp>
       <TempFeelsLike>
         feels like: {currentWeatherData.main.feels_like.toFixed(0)} °C

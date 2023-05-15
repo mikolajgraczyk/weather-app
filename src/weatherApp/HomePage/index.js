@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import Header from "../Header";
 import { useSavedLocations } from "../useSavedLocations";
-import { Link } from "react-router-dom";
 import LoadingScreen from "../../common/LoadingScreen";
 import ErrorScreen from "../../common/ErrorScreen";
+import { StyledLink } from "./styled";
 
 const HomePage = () => {
   const [savedLocationsData, setSavedLocationsData] = useState([]);
@@ -57,7 +57,7 @@ const HomePage = () => {
         <Header location="homePage" />
         {savedLocationsData.map((location) => {
           return (
-            <Link
+            <StyledLink
               to={{
                 pathname: `/city/${location.id}`,
                 search: `?lat=${location.lat}&lon=${location.lon}`,
@@ -66,7 +66,7 @@ const HomePage = () => {
             >
               {location.name} {location.temp.toFixed(0)} °C
               <br />
-            </Link>
+            </StyledLink>
           );
         })}
       </>
