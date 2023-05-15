@@ -7,6 +7,11 @@ export const useFindCitiesByName = () => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+
+    if(cityName.trim() === ""){
+      return;
+    }
+
     fetch(
       `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=10&appid=f13069042423dc1787a2b509c28143d5&lang=pl`
     )
