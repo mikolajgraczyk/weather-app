@@ -13,7 +13,13 @@ export const useSavedLocations = () => {
   const lat = new URLSearchParams(search).get("lat");
   const lon = new URLSearchParams(search).get("lon");
 
-  const saveLocation = () => {
+  const isLocationSaved = () => {
+    return savedLocations.some(
+      (location) => location.lat === lat && location.lon === lon
+    );
+  };
+
+  const addLocation = () => {
     setSavedLocations((prevState) => [
       ...prevState,
       {
@@ -23,9 +29,26 @@ export const useSavedLocations = () => {
     ]);
   };
 
+  const removeLocation = () => {
+    setSavedLocations(
+      savedLocations.filter(
+        (location) => location.lat !== lat && location.lon !== lon
+      )
+    );
+  };
+
+  const onClickSaveButton = () => {
+    if (isLocationSaved()) {
+      removeLocation();
+      return;
+    }
+    addLocation();
+    return;
+  };
+
   useEffect(() => {
     localStorage.setItem("savedLocations", JSON.stringify(savedLocations));
   }, [savedLocations]);
 
-  return { savedLocations, saveLocation };
+  return { savedLocations, onClickSaveButton, isLocationSaved };
 };

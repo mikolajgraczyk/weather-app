@@ -10,7 +10,7 @@ const Header = () => {
   const inputRef = useRef(null);
   const navigate = useNavigate();
 
-  const { saveLocation } = useSavedLocations();
+  const { onClickSaveButton, isLocationSaved } = useSavedLocations();
   const { onFormSubmit, cityName, setCityName, foundCities, setFoundCities } =
     useFindCitiesByName();
 
@@ -23,7 +23,7 @@ const Header = () => {
     <>
       <StyledHeader>
         <Search>
-          <button onClick={() => navigate("/")}>Back</button>
+          <button onClick={() => navigate("/home")}>Back</button>
           <form onSubmit={onFormSubmit}>
             <input
               ref={inputRef}
@@ -32,7 +32,7 @@ const Header = () => {
             />
           </form>
         </Search>
-        <button onClick={saveLocation}>Save</button>
+        <button onClick={onClickSaveButton}>{isLocationSaved() ? 'Remove' : 'Save'}</button>
       </StyledHeader>
       <div>
         {foundCities &&

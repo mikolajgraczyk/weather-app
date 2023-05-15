@@ -22,8 +22,8 @@ const HomePage = () => {
           {
             id: data.id,
             name: data.name,
-            lat: data.coord.lat,
-            lon: data.coord.lon,
+            lat,
+            lon,
             temp: data.main.temp,
             weather: data.weather[0].main,
           },
@@ -49,7 +49,8 @@ const HomePage = () => {
             }}
             key={location.id}
           >
-            {location.name} {location.temp.toFixed(0)} °C<br />
+            {location.name} {location.temp.toFixed(0)} °C
+            <br />
           </Link>
         );
       })}
