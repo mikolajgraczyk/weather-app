@@ -13,7 +13,7 @@ export const useFindCitiesByName = () => {
     }
 
     fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=10&appid=f13069042423dc1787a2b509c28143d5&lang=pl`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=10&appid=f13069042423dc1787a2b509c28143d5&lang=pl`
     )
       .then((response) => {
         if (!response.ok) {
