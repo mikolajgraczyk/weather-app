@@ -3,10 +3,10 @@ import { nanoid } from "@reduxjs/toolkit";
 import { useFindCitiesByName } from "../useFindCities";
 import { useSavedLocations } from "../useSavedLocations";
 import CityTile from "./CityTile/CityTile";
-import { StyledHeader, Search } from "./styled";
+import { StyledHeader, BackToHomepageButton, Search, SaveButton } from "./styled";
 import { useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ location }) => {
   const inputRef = useRef(null);
   const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ const Header = () => {
     <>
       <StyledHeader>
         <Search>
-          <button onClick={() => navigate("/home")}>Back</button>
+          <BackToHomepageButton location={location} onClick={() => navigate("/home")}>Back</BackToHomepageButton>
           <form onSubmit={onFormSubmit}>
             <input
               ref={inputRef}
@@ -32,7 +32,9 @@ const Header = () => {
             />
           </form>
         </Search>
-        <button onClick={onClickSaveButton}>{isLocationSaved() ? 'Remove' : 'Save'}</button>
+        <SaveButton location={location} onClick={onClickSaveButton}>
+          {isLocationSaved() ? "Remove" : "Save"}
+        </SaveButton>
       </StyledHeader>
       <div>
         {foundCities &&

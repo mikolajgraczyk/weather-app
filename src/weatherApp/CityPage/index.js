@@ -5,6 +5,7 @@ import ForecastList from "./ForecastList";
 import CurrentWeatherInfo from "./CurrentWeatherInfo";
 import SpecificInfo from "./SpecificInfo";
 import { MoreData } from "./styled";
+import Header from "../Header";
 
 const CityPage = () => {
   const { weatherData } = useFindCitiesByCoords();
@@ -12,6 +13,7 @@ const CityPage = () => {
   if (weatherData.status === "success") {
     return (
       <>
+        <Header/>
         <CurrentWeatherInfo currentWeatherData={weatherData.current} />
         <MoreData>
           <ForecastList forecastData={weatherData.forecast} />

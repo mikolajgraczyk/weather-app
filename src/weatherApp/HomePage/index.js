@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import Header from "../Header";
 import { useSavedLocations } from "../useSavedLocations";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [savedLocationsData, setSavedLocationsData] = useState([]);
+
   const { savedLocations } = useSavedLocations();
 
   const fetchForData = (lat, lon) => {
@@ -40,6 +42,7 @@ const HomePage = () => {
 
   return (
     <>
+      <Header location="homePage"/>
       {savedLocationsData.map((location) => {
         return (
           <Link

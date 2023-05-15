@@ -1,4 +1,3 @@
-import Header from "./Header";
 import CityPage from "./CityPage";
 import HomePage from "./HomePage";
 import { Routes, Route, Navigate } from "react-router-dom";
@@ -7,7 +6,6 @@ import { Container } from "../common/container";
 function App() {
   return (
     <Container>
-      <Header />
       <Routes>
         <Route path="/home" element={<HomePage />} />
         <Route path="/city/:id" element={<CityPage />} />
