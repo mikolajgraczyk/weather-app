@@ -33,7 +33,6 @@ const Header = ({ location }) => {
           </BackToHomepageButton>
           <Form onSubmit={onFormSubmit}>
             <Input
-              type="search"
               onChange={({ target }) => setCityName(target.value)}
               value={cityName}
               placeholder="Search"
