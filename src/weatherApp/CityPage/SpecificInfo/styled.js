@@ -13,14 +13,15 @@ export const Block = styled.div`
   gap: 50px;
 
   &:last-child {
-    border-left: 1px black solid;
+    border-left: 1px white solid;
   }
 `;
 
 export const Info = styled.span`
   width: 70%;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  gap: 12px;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   padding: 0 20px 4px 20px;
   border-bottom: 1px white solid;

@@ -6,7 +6,8 @@ import {
   StyledHeader,
   BackToHomepageButton,
   LeftArrowIcon,
-  MagnifyingGlass,
+  MagnifyingGlassIcon,
+  StarIcon,
   Form,
   Input,
   Search,
@@ -40,10 +41,14 @@ const Header = ({ location }) => {
               placeholder="Search"
             />
           </Form>
-          <MagnifyingGlass />
+          <MagnifyingGlassIcon />
         </Search>
-        <SaveButton location={location} onClick={onClickSaveButton}>
-          {isLocationSaved() ? "Remove" : "Save"}
+        <SaveButton
+          location={location}
+          issaved={isLocationSaved().toString()}
+          onClick={onClickSaveButton}
+        >
+          <StarIcon />
         </SaveButton>
       </StyledHeader>
       {foundCities && <CitiesList foundCities={foundCities} />}

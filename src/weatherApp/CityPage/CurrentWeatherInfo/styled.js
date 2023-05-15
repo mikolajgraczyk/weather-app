@@ -2,9 +2,11 @@ import { styled } from "styled-components";
 
 export const StyledCurrentWeatherInfo = styled.div`
     display: flex;
+    gap: 8px;
     flex-direction: column;
     align-items: center;
     line-height: 1.3;
+    margin-top: 4vh;
 `;
 
 export const CityName = styled.span`

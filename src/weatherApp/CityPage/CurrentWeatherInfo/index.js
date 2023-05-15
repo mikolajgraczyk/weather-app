@@ -14,7 +14,7 @@ const CurrentWeatherInfo = ({ currentWeatherData }) => {
       <TempFeelsLike>
         feels like: {currentWeatherData.main.feels_like.toFixed(0)} °C
       </TempFeelsLike>
-      <Condition>{currentWeatherData.weather[0].main}</Condition>
+      <Condition>{currentWeatherData.weather[0].description}</Condition>
     </StyledCurrentWeatherInfo>
   );
 };
