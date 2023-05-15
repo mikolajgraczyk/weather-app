@@ -12,5 +12,8 @@ export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         font-family: 'Hind Madurai', sans-serif;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 `;

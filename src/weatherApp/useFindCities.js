@@ -16,9 +16,7 @@ export const useFindCitiesByName = () => {
         }
         return response.json();
       })
-      .then((data) => {
-        removeDuplicates(data);
-      })
+      .then((data) => removeDuplicates(data))
       .catch((error) => console.error(error));
   };
 

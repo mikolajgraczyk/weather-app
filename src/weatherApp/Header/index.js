@@ -1,9 +1,17 @@
 import { useRef } from "react";
-import { nanoid } from "@reduxjs/toolkit";
 import { useFindCitiesByName } from "../useFindCities";
 import { useSavedLocations } from "../useSavedLocations";
-import CityTile from "./CityTile/CityTile";
-import { StyledHeader, BackToHomepageButton, Search, SaveButton } from "./styled";
+import CitiesList from "./CitiesList/index";
+import {
+  StyledHeader,
+  BackToHomepageButton,
+  LeftArrowIcon,
+  MagnifyingGlass,
+  Form,
+  Input,
+  Search,
+  SaveButton,
+} from "./styled";
 import { useNavigate } from "react-router-dom";
 
 const Header = ({ location }) => {
@@ -11,48 +19,34 @@ const Header = ({ location }) => {
   const navigate = useNavigate();
 
   const { onClickSaveButton, isLocationSaved } = useSavedLocations();
-  const { onFormSubmit, cityName, setCityName, foundCities, setFoundCities } =
+  const { onFormSubmit, cityName, foundCities, setCityName } =
     useFindCitiesByName();
-
-  const clearInput = () => {
-    setFoundCities([]);
-    setCityName("");
-  };
 
   return (
     <>
       <StyledHeader>
         <Search>
-          <BackToHomepageButton location={location} onClick={() => navigate("/home")}>Back</BackToHomepageButton>
-          <form onSubmit={onFormSubmit}>
-            <input
+          <BackToHomepageButton
+            location={location}
+            onClick={() => navigate("/home")}
+          >
+            <LeftArrowIcon />
+          </BackToHomepageButton>
+          <Form onSubmit={onFormSubmit}>
+            <Input
               ref={inputRef}
               onChange={({ target }) => setCityName(target.value)}
               value={cityName}
+              placeholder="Search"
             />
-          </form>
+          </Form>
+          <MagnifyingGlass />
         </Search>
         <SaveButton location={location} onClick={onClickSaveButton}>
           {isLocationSaved() ? "Remove" : "Save"}
         </SaveButton>
       </StyledHeader>
-      <div>
-        {foundCities &&
-          foundCities.map((city) => (
-            <div key={nanoid()}>
-              <CityTile
-                id={city.lat}
-                lat={city.lat}
-                lon={city.lon}
-                name={city.name}
-                state={city.state}
-                country={city.country}
-                clearInput={clearInput}
-              />
-              <br />
-            </div>
-          ))}
-      </div>
+      {foundCities && <CitiesList foundCities={foundCities} />}
     </>
   );
 };

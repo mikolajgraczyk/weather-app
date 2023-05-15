@@ -23,7 +23,7 @@ export const Info = styled.span`
   grid-template-columns: 1fr 2fr;
   align-items: center;
   padding: 0 20px 4px 20px;
-  border-bottom: 1px black solid;
+  border-bottom: 1px white solid;
 `;
 
 export const InfoName = styled.span`

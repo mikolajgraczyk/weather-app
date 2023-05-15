@@ -11,14 +11,14 @@ export const ForecastTile = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-right: 2px black solid;
+  border-right: 2px white solid;
   flex-shrink: 0;
   flex-basis: 80px;
   padding: 4px;
 
   &:last-child {
-        border: none;
-    }
+    border: none;
+  }
 `;
 
 export const ForecastHour = styled.span``;
