@@ -6,6 +6,7 @@ export const StyledCitiesList = styled.div`
   flex-direction: column;
   border: 1px grey solid;
   border-radius: 0 0 12px 12px;
+  margin-left: 36px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     position: inherit;
@@ -19,5 +20,6 @@ export const StyledCitiesList = styled.div`
     max-width: none;
     border-left: none;
     border-right: none;
+    margin: 0;
   }
 `;

@@ -7,8 +7,9 @@ export const StyledLink = styled(Link)`
   padding: 10px;
   background: rgba(0, 0, 0, 0.4);
 
-  &:last-child{
+  &:last-child {
     border: none;
+    border-radius: 0 0 12px 12px;
   }
 
   &:link {
@@ -21,6 +22,12 @@ export const StyledLink = styled(Link)`
 
   &:active {
     color: white;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
+    &:last-child {
+      border-radius: 0 0 0 0;
+    }
   }
 `;
 

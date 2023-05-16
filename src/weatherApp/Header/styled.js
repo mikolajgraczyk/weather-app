@@ -5,11 +5,13 @@ import { ReactComponent as Star } from "./star.svg";
 
 export const StyledHeader = styled.header`
   display: flex;
-  gap: 4px;
+  gap: 6px;
   justify-content: space-between;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     padding: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px gray solid;
   }
 `;
 
@@ -19,6 +21,7 @@ export const BackToHomepageButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 
   ${({ location }) =>
     location === "homePage" &&
@@ -92,6 +95,8 @@ export const SaveButton = styled.button`
   justify-content: center;
   align-items: center;
   transition: 0.2s;
+  padding: 0;
+  margin-right: 4px;
 
   ${({issaved}) => issaved === "true" && css`
     color: gold;
