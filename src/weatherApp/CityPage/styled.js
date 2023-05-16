@@ -10,7 +10,7 @@ export const MoreData = styled.div`
   @media(max-width: ${({theme}) => theme.breakpoint.mobile}px){
     max-width: none;
     width: 100%;
-    margin-top: 2vh;
+    margin-top: 6vh;
     border-left: none;
     border-right: none;
   }

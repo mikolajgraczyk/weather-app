@@ -7,6 +7,10 @@ export const StyledCurrentWeatherInfo = styled.div`
   align-items: center;
   line-height: 1.3;
   margin-top: 4vh;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    margin-top: 3vh;
+  }
 `;
 
 export const Name = styled.span`
