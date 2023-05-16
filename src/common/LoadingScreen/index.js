@@ -1,7 +1,11 @@
+import { StyledLoadingScreen, StyledLoadingIcon } from "./styled";
+
 const LoadingScreen = () => {
-    return(
-        <>Loading</>
-    );
+  return (
+    <StyledLoadingScreen>
+      <StyledLoadingIcon />
+    </StyledLoadingScreen>
+  );
 };
 
 export default LoadingScreen;
