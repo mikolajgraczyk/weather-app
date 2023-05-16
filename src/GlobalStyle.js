@@ -15,6 +15,5 @@ export const GlobalStyle = createGlobalStyle`
         background-color: white;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 100vh;
     }
 `;
