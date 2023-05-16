@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
-  border-bottom: 1px white solid;
+  border-bottom: 1px grey solid;
   padding: 10px;
+  background: rgba(0, 0, 0, 0.4);
 
   &:last-child{
     border: none;

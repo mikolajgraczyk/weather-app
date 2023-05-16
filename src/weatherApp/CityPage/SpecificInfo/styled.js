@@ -17,7 +17,7 @@ export const Block = styled.div`
   gap: 50px;
 
   &:last-child {
-    border-left: 1px white solid;
+    border-left: 1px gray solid;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
@@ -46,7 +46,7 @@ export const Info = styled.span`
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   padding: 0 20px 4px 20px;
-  border-bottom: 1px white solid;
+  border-bottom: 1px grey solid;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     min-width: 230px;

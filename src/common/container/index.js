@@ -33,7 +33,7 @@ export const Container = styled.main`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    padding: 8px 8px 0 4px;
+    padding: 0 0 0 0;
     height: 100%;
   }
 `;

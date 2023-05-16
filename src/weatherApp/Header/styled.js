@@ -7,6 +7,10 @@ export const StyledHeader = styled.header`
   display: flex;
   gap: 4px;
   justify-content: space-between;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    padding: 8px;
+  }
 `;
 
 export const BackToHomepageButton = styled.button`
