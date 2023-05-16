@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 export const StyledForecastList = styled.div`
   display: flex;
   overflow-x: scroll;
+  border-bottom: 1px white solid;
 
   &::-webkit-scrollbar {
     height: 8px;
