@@ -15,3 +15,11 @@ export const Container = styled.div`
   gap: 8px;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 `;
+
+export const NoSavedCitiesInfo = styled.div`
+  font-weight: 600;
+  font-size: 56px;
+  color: rgba(193, 193, 193, 0.4);
+  width: 450px;
+  margin: 20vh auto;
+`;

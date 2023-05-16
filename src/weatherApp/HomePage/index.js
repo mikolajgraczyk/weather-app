@@ -3,7 +3,7 @@ import Header from "../Header";
 import { useSavedLocations } from "../useSavedLocations";
 import LoadingScreen from "../../common/LoadingScreen";
 import ErrorScreen from "../../common/ErrorScreen";
-import { StyledHomepage, Container } from "./styled";
+import { StyledHomepage, Container, NoSavedCitiesInfo } from "./styled";
 import SavedLocationTile from "./SavedLocationTile";
 import homebackground from "./homebackground.jpg";
 
@@ -74,7 +74,7 @@ const HomePage = () => {
     return (
       <>
         <Header location="homePage" />
-        Brak zapisanych miast
+        <NoSavedCitiesInfo>NO SAVED CITIES</NoSavedCitiesInfo>
       </>
     );
   }
