@@ -20,6 +20,7 @@ export const NoSavedCitiesInfo = styled.div`
   font-weight: 600;
   font-size: 56px;
   color: rgba(193, 193, 193, 0.4);
-  width: 450px;
+  text-align: center;
   margin: 20vh auto;
+  height: 100vh;
 `;
