@@ -7,6 +7,7 @@ export const StyledLoadingScreen = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     height: 80%;
+    height: 100vh;
   }
 `;
 

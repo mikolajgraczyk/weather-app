@@ -1,17 +1,17 @@
 import { styled } from "styled-components";
-import { Link } from "react-router-dom";
 
-export const StyledLink = styled(Link)`
-  &:link {
-    color: white;
-    text-decoration: none;
-  }
+export const StyledHomepage = styled.div`
+  height: 100vh;
+  margin-top: 16px;
 
-  &:visited {
-    color: white;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    flex-direction: column;
   }
+`;
 
-  &:active {
-    color: white;
-  }
+export const Container = styled.div`
+  width: 100%;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 `;

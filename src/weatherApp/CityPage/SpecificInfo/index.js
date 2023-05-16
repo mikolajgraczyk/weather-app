@@ -8,7 +8,7 @@ import {
   SunsetIcon,
   HumidityIcon,
   StarIcon,
-} from "../weatherIcons/index";
+} from "../../weatherIcons/index";
 
 const SpecificInfo = ({ currentWeatherData }) => {
   const sunriseTimestamp = convertDate(currentWeatherData.sys.sunrise).hour;

@@ -3,11 +3,15 @@ import Header from "../Header";
 import { useSavedLocations } from "../useSavedLocations";
 import LoadingScreen from "../../common/LoadingScreen";
 import ErrorScreen from "../../common/ErrorScreen";
-import { StyledLink } from "./styled";
+import { StyledHomepage, Container } from "./styled";
+import SavedLocationTile from "./SavedLocationTile";
+import homebackground from "./homebackground.jpg";
 
 const HomePage = () => {
   const [savedLocationsData, setSavedLocationsData] = useState([]);
   const [status, setStatus] = useState("loading");
+
+  document.body.style.backgroundImage = `url('${homebackground}')`;
 
   const { savedLocations } = useSavedLocations();
 
@@ -55,20 +59,13 @@ const HomePage = () => {
     return (
       <>
         <Header location="homePage" />
-        {savedLocationsData.map((location) => {
-          return (
-            <StyledLink
-              to={{
-                pathname: `/city/${location.id}`,
-                search: `?lat=${location.lat}&lon=${location.lon}`,
-              }}
-              key={location.id}
-            >
-              {location.name} {location.temp.toFixed(0)} °C
-              <br />
-            </StyledLink>
-          );
-        })}
+        <StyledHomepage>
+          <Container>
+            {savedLocationsData.map((location) => {
+              return <SavedLocationTile location={location} />;
+            })}
+          </Container>
+        </StyledHomepage>
       </>
     );
   }
