@@ -6,7 +6,7 @@ export const convertDate = (timestamp) => {
       hour: "2-digit",
       minute: "2-digit",
     });
-    const dayOfTheWeek = date.toLocaleDateString(undefined, {
+    const dayOfTheWeek = date.toLocaleDateString('en-US', {
       weekday: "long",
     });
 
