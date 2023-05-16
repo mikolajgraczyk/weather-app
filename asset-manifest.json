@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/weather-app/static/js/main.0e5d1ec4.js",
+    "main.js": "/weather-app/static/js/main.1ea91957.js",
     "static/js/787.d9312eb8.chunk.js": "/weather-app/static/js/787.d9312eb8.chunk.js",
     "static/media/rainbackground.jpg": "/weather-app/static/media/rainbackground.54b6f0840635008c3b8a.jpg",
     "static/media/snowbackground.jpg": "/weather-app/static/media/snowbackground.85e641bd5ba9d3de7b57.jpg",
@@ -26,13 +26,14 @@
     "static/media/magnifyingGlass.svg": "/weather-app/static/media/magnifyingGlass.c4c1cb2144b91f5921f66fb5977ca0d8.svg",
     "index.html": "/weather-app/index.html",
     "static/media/cloudy.svg": "/weather-app/static/media/cloudy.065cd33e2b768757fc03601a82220844.svg",
+    "static/media/loading.svg": "/weather-app/static/media/loading.47801d7accc998ea0adff328ef16f88b.svg",
     "static/media/pressureHigh.svg": "/weather-app/static/media/pressureHigh.74c3eb4ad723a16b3807a04afbb964fb.svg",
     "static/media/pressureLow.svg": "/weather-app/static/media/pressureLow.86dd429911b42f08b554111a7a673bf0.svg",
     "static/media/leftArrow.svg": "/weather-app/static/media/leftArrow.5c7c105946b24c73ef53cc38eaf43de5.svg",
-    "main.0e5d1ec4.js.map": "/weather-app/static/js/main.0e5d1ec4.js.map",
+    "main.1ea91957.js.map": "/weather-app/static/js/main.1ea91957.js.map",
     "787.d9312eb8.chunk.js.map": "/weather-app/static/js/787.d9312eb8.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.0e5d1ec4.js"
+    "static/js/main.1ea91957.js"
   ]
 }
