@@ -1,11 +1,15 @@
 {
   "files": {
-    "main.js": "/weather-app/static/js/main.f6f143f9.js",
+    "main.js": "/weather-app/static/js/main.82fe9026.js",
     "static/js/787.d9312eb8.chunk.js": "/weather-app/static/js/787.d9312eb8.chunk.js",
     "static/media/rainbackground.jpg": "/weather-app/static/media/rainbackground.54b6f0840635008c3b8a.jpg",
     "static/media/snowbackground.jpg": "/weather-app/static/media/snowbackground.85e641bd5ba9d3de7b57.jpg",
+    "static/media/thunderstorm.jpg": "/weather-app/static/media/thunderstorm.873bb3b31116bd48dd2f.jpg",
+    "static/media/brokenclouds.jpg": "/weather-app/static/media/brokenclouds.9bb8f251c6c7c1a24632.jpg",
+    "static/media/scatteredclouds.jpg": "/weather-app/static/media/scatteredclouds.fb8557e022fdc0727430.jpg",
     "static/media/cloudsbackground.jpg": "/weather-app/static/media/cloudsbackground.4a6f20a468e7d254494f.jpg",
     "static/media/clearbackground.jpg": "/weather-app/static/media/clearbackground.6a79cee501793f4d6a62.jpg",
+    "static/media/fewclouds.jpg": "/weather-app/static/media/fewclouds.cbc810d2758dd9a98000.jpg",
     "static/media/snow.svg": "/weather-app/static/media/snow.528543caae2adbd318d86fcb6062b67e.svg",
     "static/media/rain.svg": "/weather-app/static/media/rain.0dc8335e1b7493bf52c61f083041a541.svg",
     "static/media/drizzle.svg": "/weather-app/static/media/drizzle.7eaaf6a78d604bd38453405d3329a2b2.svg",
@@ -25,10 +29,10 @@
     "static/media/pressureHigh.svg": "/weather-app/static/media/pressureHigh.74c3eb4ad723a16b3807a04afbb964fb.svg",
     "static/media/pressureLow.svg": "/weather-app/static/media/pressureLow.86dd429911b42f08b554111a7a673bf0.svg",
     "static/media/leftArrow.svg": "/weather-app/static/media/leftArrow.5c7c105946b24c73ef53cc38eaf43de5.svg",
-    "main.f6f143f9.js.map": "/weather-app/static/js/main.f6f143f9.js.map",
+    "main.82fe9026.js.map": "/weather-app/static/js/main.82fe9026.js.map",
     "787.d9312eb8.chunk.js.map": "/weather-app/static/js/787.d9312eb8.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.f6f143f9.js"
+    "static/js/main.82fe9026.js"
   ]
 }
