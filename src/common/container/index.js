@@ -34,6 +34,6 @@ export const Container = styled.main`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     padding: 0 0 0 0;
-    /* height: 100%; */
+    height: 100%;
   }
 `;
