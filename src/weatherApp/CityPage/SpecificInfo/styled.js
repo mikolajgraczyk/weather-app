@@ -30,7 +30,7 @@ export const Block = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     padding: 0;
-    margin-top: 50px;
+    gap: 0;
 
     &:last-child {
       border-top: none;
@@ -56,7 +56,7 @@ export const Info = styled.span`
     min-width: 100px;
     width: 100%;
     gap: 0;
-    padding: 0 8px 4px 8px;
+    padding: 25px 8px 25px 8px;
   }
 `;
 
