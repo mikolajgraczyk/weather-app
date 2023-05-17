@@ -14,6 +14,10 @@ export const Container = styled.div`
   display: grid;
   gap: 8px;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    padding: 0 8px;
+  }
 `;
 
 export const NoSavedCitiesInfo = styled.div`

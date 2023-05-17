@@ -2,18 +2,18 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export const useFindCitiesByName = () => {
-  const [cityName, setCityName] = useState("");
+  const [usersInput, setUsersInput] = useState("");
   const [foundCities, setFoundCities] = useState([]);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    if(cityName.trim() === ""){
+    if (usersInput.trim() === "") {
       return;
     }
 
     fetch(
-      `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=10&appid=f13069042423dc1787a2b509c28143d5&lang=pl`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${usersInput}&limit=10&appid=f13069042423dc1787a2b509c28143d5&lang=pl`
     )
       .then((response) => {
         if (!response.ok) {
@@ -34,8 +34,8 @@ export const useFindCitiesByName = () => {
 
   return {
     onFormSubmit,
-    cityName,
-    setCityName,
+    usersInput,
+    setUsersInput,
     foundCities,
     setFoundCities,
   };
@@ -45,8 +45,8 @@ export const useFindCitiesByCoords = () => {
   const [weatherData, setWeatherData] = useState({});
 
   const { search } = useLocation();
-  const lat = new URLSearchParams(search).get("lat");
-  const lon = new URLSearchParams(search).get("lon");
+  const lat = +new URLSearchParams(search).get("lat");
+  const lon = +new URLSearchParams(search).get("lon");
 
   const fetchForCurrentWeather = () => {
     fetch(

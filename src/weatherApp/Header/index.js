@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { useFindCitiesByName } from "../useFindCities";
 import { useSavedLocations } from "../useSavedLocations";
 import CitiesList from "./CitiesList/index";
@@ -18,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 const Header = ({ location }) => {
   const navigate = useNavigate();
   const { onClickSaveButton, isLocationSaved } = useSavedLocations();
-  const { onFormSubmit, cityName, foundCities, setCityName } =
+  const { onFormSubmit, usersInput, foundCities, setUsersInput } =
     useFindCitiesByName();
 
   return (
@@ -33,8 +32,8 @@ const Header = ({ location }) => {
           </BackToHomepageButton>
           <Form onSubmit={onFormSubmit}>
             <Input
-              onChange={({ target }) => setCityName(target.value)}
-              value={cityName}
+              onChange={({ target }) => setUsersInput(target.value)}
+              value={usersInput}
               placeholder="Search"
             />
           </Form>

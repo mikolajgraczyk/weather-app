@@ -5,7 +5,7 @@ import { ReactComponent as Star } from "./star.svg";
 
 export const StyledHeader = styled.header`
   display: flex;
-  gap: 6px;
+  gap: 12px;
   justify-content: space-between;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
@@ -77,6 +77,7 @@ export const Search = styled.div`
   display: flex;
   width: 35%;
   align-items: center;
+  gap: 6px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
   width: 60%;

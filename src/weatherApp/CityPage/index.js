@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ErrorScreen from "../../common/ErrorScreen";
 import LoadingScreen from "../../common/LoadingScreen";
 import { useFindCitiesByCoords } from "../useFindCities";
@@ -22,8 +23,6 @@ const CityPage = () => {
     const currentCondition = weatherData.current.weather[0].main;
     const currentConditionDescription =
       weatherData.current.weather[0].description;
-
-    console.log(currentConditionDescription);
 
     switch (currentCondition) {
       case "Rain":
