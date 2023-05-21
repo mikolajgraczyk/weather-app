@@ -7,7 +7,7 @@ It's a simple weather app with access to current weather data for any location o
 
 https://mikolajgraczyk.github.io/weather-app/#/home
 
-![example]()
+![example](https://github.com/mikolajgraczyk/weather-app/blob/main/public/demo.gif?raw=true)
 
 ## Technologies used in project
 - html
