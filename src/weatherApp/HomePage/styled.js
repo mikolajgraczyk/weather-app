@@ -1,11 +1,11 @@
 import { styled } from "styled-components";
 
 export const StyledHomepage = styled.div`
-  height: 100vh;
   margin-top: 16px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     flex-direction: column;
+    height: 93vh;
   }
 `;
 
