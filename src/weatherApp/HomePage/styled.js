@@ -26,8 +26,9 @@ export const NoSavedCitiesInfo = styled.div`
   color: rgba(193, 193, 193, 0.4);
   text-align: center;
   margin: 20vh auto 0;
+  padding: 0 12px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    height: 100vh;
+    height: 74vh;
   }
 `;
