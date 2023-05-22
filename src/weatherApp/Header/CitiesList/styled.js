@@ -1,12 +1,20 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledCitiesList = styled.div`
-  position: absolute;
   display: flex;
+  position: absolute;
   flex-direction: column;
   border: 1px grey solid;
   border-radius: 0 0 12px 12px;
-  margin-left: 36px;
+  max-width: 33%;
+  margin-left: 3.5%;
+
+  ${({ location }) =>
+    location === "homePage" &&
+    css`
+      position: inherit;
+      margin-left: 0;
+    `}
 
   @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
     position: inherit;

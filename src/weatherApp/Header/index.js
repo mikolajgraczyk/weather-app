@@ -47,7 +47,9 @@ const Header = ({ location }) => {
           <StarIcon />
         </SaveButton>
       </StyledHeader>
-      {foundCities.length > 0 && <CitiesList foundCities={foundCities} />}
+      {foundCities.length > 0 && (
+        <CitiesList foundCities={foundCities} location={location} />
+      )}
     </>
   );
 };

@@ -2,10 +2,10 @@ import CityTile from "./CityTile";
 import { nanoid } from "@reduxjs/toolkit";
 import { StyledCitiesList } from "./styled";
 
-const CitiesList = ({ foundCities }) => {
+const CitiesList = ({ foundCities, location }) => {
 
   return (
-    <StyledCitiesList>
+    <StyledCitiesList location={location}>
       {foundCities &&
         foundCities.map((city) => (
           <CityTile
