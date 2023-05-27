@@ -11,7 +11,11 @@ export const MoreData = styled.div`
     max-width: none;
     width: 100%;
     margin-top: 6vh;
-    border-left: none;
+    /* border-left: none;
     border-right: none;
+    border-bot */
+    border: none;
+    border-top: 1px grey solid;
+    border-radius: 12px 12px 0 0;
   }
 `;
