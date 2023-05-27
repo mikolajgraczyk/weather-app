@@ -15,6 +15,7 @@ import brokenclouds from "./BackgroundImages/brokenclouds.jpg";
 import scatteredclouds from "./BackgroundImages/scatteredclouds.jpg";
 import fewclouds from "./BackgroundImages/fewclouds.jpg";
 import thunderstorm from "./BackgroundImages/thunderstorm.jpg";
+import { Container } from "../../common/container";
 
 const CityPage = () => {
   const { weatherData } = useFindCitiesByCoords();
@@ -58,14 +59,14 @@ const CityPage = () => {
     selectBackground();
 
     return (
-      <>
+      <Container location="cityPage">
         <Header />
         <CurrentWeatherInfo currentWeatherData={weatherData.current} />
         <MoreData>
           <ForecastList forecastData={weatherData.forecast} />
           <SpecificInfo currentWeatherData={weatherData.current}></SpecificInfo>
         </MoreData>
-      </>
+      </Container>
     );
   }
 

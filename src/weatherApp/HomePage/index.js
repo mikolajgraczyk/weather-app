@@ -3,9 +3,10 @@ import Header from "../Header";
 import { useSavedLocations } from "../useSavedLocations";
 import LoadingScreen from "../../common/LoadingScreen";
 import ErrorScreen from "../../common/ErrorScreen";
-import { StyledHomepage, Container, NoSavedCitiesInfo } from "./styled";
+import { StyledHomepage, GridList, NoSavedCitiesInfo } from "./styled";
 import SavedLocationTile from "./SavedLocationTile";
 import homebackground from "./homebackground.jpg";
+import { Container } from "../../common/container";
 
 const HomePage = () => {
   const [savedLocationsData, setSavedLocationsData] = useState([]);
@@ -57,34 +58,42 @@ const HomePage = () => {
 
   if (status === "success") {
     return (
-      <>
+      <Container>
         <Header location="homePage" />
         <StyledHomepage>
-          <Container>
+          <GridList>
             {savedLocationsData.map((location) => {
               return <SavedLocationTile location={location} />;
             })}
-          </Container>
+          </GridList>
         </StyledHomepage>
-      </>
+      </Container>
     );
   }
 
   if (savedLocations.length < 1) {
     return (
-      <>
+      <Container>
         <Header location="homePage" />
         <NoSavedCitiesInfo>NO SAVED CITIES</NoSavedCitiesInfo>
-      </>
+      </Container>
     );
   }
 
   if (status === "loading") {
-    return <LoadingScreen />;
+    return (
+      <Container>
+        <LoadingScreen />
+      </Container>
+    );
   }
 
   if (status === "error") {
-    return <ErrorScreen />;
+    return (
+      <Container>
+        <ErrorScreen />
+      </Container>
+    );
   }
 };
 

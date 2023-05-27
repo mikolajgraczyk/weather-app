@@ -9,7 +9,7 @@ export const StyledHomepage = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const GridList = styled.div`
   width: 100%;
   display: grid;
   gap: 8px;

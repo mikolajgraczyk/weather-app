@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.main`
   max-width: 1200px;
@@ -35,5 +35,11 @@ export const Container = styled.main`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     padding: 0 0 0 0;
     height: 100%;
+
+    ${({ location }) =>
+      location === "cityPage" &&
+      css`
+        background: none;
+      `}
   }
 `;
