@@ -10,6 +10,7 @@ import {
 } from "./styled";
 
 const ForecastList = ({ forecastData }) => {
+
   return (
     <StyledForecastList>
       {forecastData.list.map((element) => {

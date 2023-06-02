@@ -1,10 +1,13 @@
 import { StyledLoadingScreen, StyledLoadingIcon } from "./styled";
+import { Container } from "../container";
 
 const LoadingScreen = () => {
   return (
-    <StyledLoadingScreen>
-      <StyledLoadingIcon />
-    </StyledLoadingScreen>
+    <Container>
+      <StyledLoadingScreen>
+        <StyledLoadingIcon />
+      </StyledLoadingScreen>
+    </Container>
   );
 };
 

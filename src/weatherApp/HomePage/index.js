@@ -81,19 +81,11 @@ const HomePage = () => {
   }
 
   if (status === "loading") {
-    return (
-      <Container>
-        <LoadingScreen />
-      </Container>
-    );
+    return <LoadingScreen />;
   }
 
   if (status === "error") {
-    return (
-      <Container>
-        <ErrorScreen />
-      </Container>
-    );
+    return <ErrorScreen />;
   }
 };
 
