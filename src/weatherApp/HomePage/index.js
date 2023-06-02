@@ -63,7 +63,7 @@ const HomePage = () => {
         <StyledHomepage>
           <GridList>
             {savedLocationsData.map((location) => {
-              return <SavedLocationTile location={location} />;
+              return <SavedLocationTile key={location.id} location={location} />;
             })}
           </GridList>
         </StyledHomepage>
