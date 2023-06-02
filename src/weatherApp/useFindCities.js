@@ -61,6 +61,7 @@ export const useFindCitiesByCoords = () => {
       .then((data) => {
         setWeatherData((prevState) => ({
           ...prevState,
+          currentWeatherStatus: "success",
           current: data,
         }));
       })
@@ -68,7 +69,7 @@ export const useFindCitiesByCoords = () => {
         console.error(error);
         setTimeout(() => {
           setWeatherData({
-            status: "error",
+            currentWeatherStatus: "error",
           });
         }, 500);
       });
@@ -92,7 +93,7 @@ export const useFindCitiesByCoords = () => {
         setTimeout(() => {
           setWeatherData((prevState) => ({
             ...prevState,
-            status: "success",
+            forecastStatus: "success",
           }));
         }, 500);
       })
@@ -100,7 +101,7 @@ export const useFindCitiesByCoords = () => {
         console.error(error);
         setTimeout(() => {
           setWeatherData({
-            status: "error",
+            forecastStatus: "error",
           });
         }, 500);
       });
