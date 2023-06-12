@@ -1,7 +1,7 @@
 # Weather-app
 
 ## Description
-It's a simple weather app with access to current weather data for any location on Earth including over 200,000 cities! It shows current weather contition as well as temperature, atmospheric pressure and more! User can also see 5 day forecast.
+It's a simple weather app with access to current weather data for any location on Earth including over 200,000 cities! It shows current weather contition as well as temperature, atmospheric pressure and more! User can also see 5 day forecast. I also tried to maintain minimalism and aestheticism.
 
 ## Demo
 
