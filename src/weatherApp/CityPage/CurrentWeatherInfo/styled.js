@@ -10,7 +10,7 @@ export const StyledCurrentWeatherInfo = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     margin-top: 3vh;
-    text-shadow: 0px 0px 7px rgba(0, 0, 0, 1);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
   }
 `;
 
