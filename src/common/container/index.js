@@ -8,6 +8,10 @@ export const Container = styled.main`
   padding: 16px 12px 0 12px;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  -moz-backdrop-filter: blur(4px);
+  -o-backdrop-filter: blur(4px);
+  -ms-backdrop-filter: blur(4px);
   color: white;
   box-shadow: 0px 0px 31px 1px rgba(0, 0, 0, 1);
 
