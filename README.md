@@ -1,13 +1,15 @@
 # Weather-app
 
 ## Description
-It's a simple weather app with access to current weather data for any location on Earth including over 200,000 cities! It shows current weather contition as well as temperature, atmospheric pressure and more! User can also see 5 day forecast. I also tried to maintain minimalism and aestheticism.
+It's a simple weather app with access to current weather data for any location on Earth including over 200,000 cities! It shows current weather contition as well as temperature, atmospheric pressure and more! User can also see 5 day forecast. I also tried to maintain minimalism and aestheticism. I also consider moving to a different, more accurate API in the future.
 
 ## Demo
 
 https://mikolajgraczyk.github.io/weather-app/#/home
 
 ![example](https://github.com/mikolajgraczyk/weather-app/blob/main/public/demo.gif?raw=true)
+
+API used in project: https://openweathermap.org/api
 
 ## Technologies used in project
 - html
